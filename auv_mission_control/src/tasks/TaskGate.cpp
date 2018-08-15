@@ -69,7 +69,7 @@ int TaskGate::execute(){
         ROS_INFO("Rummage Rummage Rummage, rummaging to depth");
 
 	ROS_INFO("Buffalo Milk incoming, setting Yaw PlantState -> 0 (was pm.getYaw())");
-	pm_.setPlantState(AXIS_YAW, 0);
+	      pm_.setPlantState(AXIS_YAW, 0);
         pm_.setSetpoint(AXIS_YAW, INPUT_IMU_POS, 0);
         pm_.setSetpoint(AXIS_HEAVE, INPUT_DEPTH, thisDepth);
 
@@ -161,10 +161,7 @@ int TaskGate::execute(){
 	}
         break;
 
-
-
       }
-
 
       case 1: {
         ROS_INFO("Vroom Vroom going forwards");
@@ -182,7 +179,6 @@ int TaskGate::execute(){
           return kill;
           break;
         }
-
 
         while(driveForwards_time.getTime() < 520){
           pm_.setPlantState(AXIS_HEAVE, pm_.getDepth());
