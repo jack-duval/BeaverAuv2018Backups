@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="joy" type="joy_node" name="$(anon joy)">
+  </node>
+  <node pkg="auv_motor_control" type="motor_controller" name="$(anon motor_controller)" output="screen">
+  </node>
+  <node pkg="auv_motor_control" type="controller_to_heading" name="$(anon heading)">
+  </node>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="auv_raspi" type="write_to_motors.py" name="RasPi_Motor_Recieving" output="screen"></node>
+  <node pkg="auv_raspi" type="get_depth_publish.py" name="Depth_Publishing" output="screen"></node>
+</launch>

@@ -1,0 +1,10 @@
+#all the different thruster VALUES
+
+float64 thruster_xy_frontRight
+float64 thruster_xy_frontLeft
+float64 thruster_xy_backRight
+float64 thruster_xy_backLeft
+float64 thruster_z_frontRight
+float64 thruster_z_frontLeft
+float64 thruster_z_backRight
+float64 thruster_z_backLeft

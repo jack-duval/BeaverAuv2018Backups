@@ -1,0 +1,8 @@
+int32 thruster_xy_frontRight
+int32 thruster_xy_frontLeft
+int32 thruster_xy_backRight
+int32 thruster_xy_backLeft
+int32 thruster_z_frontRight
+int32 thruster_z_frontLeft
+int32 thruster_z_backRight
+int32 thruster_z_backLeft
