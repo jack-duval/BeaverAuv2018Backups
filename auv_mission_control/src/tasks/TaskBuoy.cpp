@@ -75,7 +75,7 @@ int TaskBuoy::execute(){
                       }
                       else{
                          pm_.setPlantState(AXIS_YAW, 360);
-                        pm_.setPlantState(AXIS_SWAY, 360);
+                         pm_.setPlantState(AXIS_SWAY, 360);
               	      }
 		      if(vision_.getBuoyArea() > 7000000)
 			action = 2;
