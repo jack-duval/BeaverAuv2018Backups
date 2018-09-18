@@ -47,7 +47,7 @@ int TaskGate::execute(){
         //Changed To try and set 0 on start
 	//if(runOnce == 1){
 //Probably redundant, but if it ain't broke don't fix it.
-  pm_.setZero(AXIS_YAW);
+        pm_.setZero(AXIS_YAW);
         pm_.setZero(AXIS_YAW);
         pm_.setZero(AXIS_YAW);
         pm_.setZero(AXIS_YAW);
@@ -68,7 +68,8 @@ int TaskGate::execute(){
 
         ROS_INFO("Rummage Rummage Rummage, rummaging to depth");
 
-	ROS_INFO("Buffalo Milk incoming, setting Yaw PlantState -> 0 (was pm.getYaw())");
+	ROS_INFO("Buffalo Milk incoming, setting Yaw PlantState -> 0");
+  // Changed at Competition from : ROS_INFO(pm.getYaw()
 	      pm_.setPlantState(AXIS_YAW, 0);
         pm_.setSetpoint(AXIS_YAW, INPUT_IMU_POS, 0);
         pm_.setSetpoint(AXIS_HEAVE, INPUT_DEPTH, thisDepth);
@@ -184,7 +185,7 @@ int TaskGate::execute(){
           pm_.setPlantState(AXIS_HEAVE, pm_.getDepth());
           pm_.setSetpoint(AXIS_HEAVE, INPUT_DEPTH, thisDepth);
           pm_.setPlantState(AXIS_YAW, pm_.getYaw());
-	  ROS_INFO("yaw%f", pm_.getYaw());
+          ROS_INFO("yaw%f", pm_.getYaw());
           pm_.setSetpoint(AXIS_YAW, INPUT_IMU_POS, 0);
 	//changed this at 12:30 day of run, Worked on final day.
           pm_.setControlEffort(AXIS_SURGE, -75);
